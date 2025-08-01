@@ -21,6 +21,7 @@ body {
 }
 nav {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   padding: 10px 0;
@@ -113,6 +114,7 @@ body {
 }
 nav {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   padding: 10px 0;
@@ -355,4 +357,77 @@ input[type="radio"] {
 }
 .row4{
   border-top: 5px solid silver;
+}
+
+@media (max-width: 960px) {
+  .row1, .row2, .row3, .row4 {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .text-col1, .text-col2, .text-col3, .text-col4,
+  .img-col1, .img-col2, .img-col3, .img-col4 {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .header-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .header-content h3,
+  .header-content p {
+    font-size: 1rem;
+  }
+
+  .Email-SignUp,
+  .email-signup {
+    flex-direction: column;
+  }
+
+  .Email-SignUp input,
+  .email-signup input,
+  .Email-SignUp button,
+  .email-signup button {
+    width: 100%;
+    margin: 8px 0;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav img.logo {
+    margin-bottom: 10px;
+  }
+
+  .language-btn,
+  .btn1 {
+    font-size: 0.8rem;
+    padding: 6px 14px;
+  }
+}
+
+/* Basic style */
+.theme-label {
+  cursor: pointer;
+  padding: 8px;
+  display: inline-block;
+  background: #444;
+  color: white;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+/* Dark & Light Theme */
+body {
+  background-color: black;
+  color: white;
+  transition: 0.4s ease;
+}
+
+#theme-toggle:checked ~ body {
+  background-color: white;
+  color: black;
 }
