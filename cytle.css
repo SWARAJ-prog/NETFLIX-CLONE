@@ -419,15 +419,3 @@ input[type="radio"] {
   border-radius: 5px;
   margin: 10px;
 }
-
-/* Dark & Light Theme */
-body {
-  background-color: black;
-  color: white;
-  transition: 0.4s ease;
-}
-
-#theme-toggle:checked ~ body {
-  background-color: white;
-  color: black;
-}
